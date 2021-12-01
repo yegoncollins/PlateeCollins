@@ -1,13 +1,13 @@
 # Main.py
 
-import cv2
-import numpy as np
 import os
+import numpy as np
+
+import cv2
 
 import DetectChars
 import DetectPlates
 import PossiblePlate
-
 # module level variables ##########################################################################
 SCALAR_BLACK = (0.0, 0.0, 0.0)
 SCALAR_WHITE = (255.0, 255.0, 255.0)
@@ -28,7 +28,7 @@ def main():
         return                                                          # and exit program
     # end if
 
-    imgOriginalScene  = cv2.imread("LicPlateImages/20.png")               # open image
+    imgOriginalScene  = cv2.imread("LicPlateImages/27.png")               # open image
 
     if imgOriginalScene is None:                            # if image was not read successfully
         print("\nerror: image not read from file \n\n")  # print error message to std out
@@ -61,7 +61,7 @@ def main():
             return
         #else:
 
-       # drawRedRectangleAroundPlate(imgOriginalScene, licPlate)
+       #drawRedRectangleAroundPlate(imgOriginalScene, licPlate)
 
         print("\nlicense plate read from image = " + licPlate.strChars + "\n")
         print("----------------------------------------")
